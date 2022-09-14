@@ -10,6 +10,7 @@ The high-level idea of an "unsafe" character is defined by the parent module as 
     - discouraged in XML
     - a predefined entity in XML
     - illegal in JSON strings
+    - whitespace
 """
 import itertools
 from itertools import islice
