@@ -1,0 +1,28 @@
+# Adding some of my scratchpad notes while working on the project
+
+
+S3 api calls generally use XML, which means keys should avoid using certain characters.  Some are invalid, others are not recommended:
+    https://forums.aws.amazon.com/thread.jspa?threadID=140525
+    https://stackoverflow.com/questions/1707890/fast-way-to-filter-illegal-xml-unicode-chars-in-python
+    https://en.wikipedia.org/wiki/Valid_characters_in_XML#Characters_allowed_but_discouraged
+
+
+Running a single `ls` command should return all the objects AND the metadata
+    describing a specific object with metadata should be achievable with an `ls` command
+        which means you can't lump metadata for multiple objects
+        metadata can be after <objectname> and cannot contain the / character
+
+
+Separating out python lib and filesystem implementation
+    Pylib
+        read/write blobs
+        (maybe?) read/write metadata
+        give a prefix and go
+        probably no reserved characters
+    fs
+        list objects/folders
+        storage redirection
+        (maybe?) read/write metadata
+        folders and object names have reserved characters (maybe?)
+
+python encodings: https://docs.python.org/3/library/codecs.html#python-specific-encodings

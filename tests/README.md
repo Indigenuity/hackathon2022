@@ -1,0 +1,1 @@
+Well, I tried doing the project using a test-driven-development strategy.  Succeeded only partially.  These are poor, half-cocked tests, but I figured I'd commit them anyway

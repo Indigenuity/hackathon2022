@@ -1,0 +1,3 @@
+I really wanted to use the [IO primitives that python provides](https://docs.python.org/3/library/io.html#module-io).  I got a lot of the stubs into a class, but I panicked halfway through the project and just started lumping things together.  That's why there's a `read_all` method that does all the reading.
+
+One noteworthy source of trouble is that all the "raw" IO classes are byte-based, and the higher-level classes move on to text.  The paradigm is reversed a bit when S3 (text-based) is the backing store instead of a hard disk (bytes-based).
